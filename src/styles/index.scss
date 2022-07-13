@@ -1,0 +1,174 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+
+.container {
+  margin: 20px;
+  border-radius: 5px;
+  background: #fff;
+  min-height: calc(100vh - 140px);
+  padding: 24px 34px;
+
+  & label {
+    font-weight: 500 !important;
+  }
+}
+
+.base-box {
+  background: #fff;
+  padding: 24px;
+  border-radius: 5px;
+}
+
+.flex {
+  display: flex;
+}
+
+._dir {
+  flex-direction: column;
+}
+
+._align {
+  align-items: center;
+}
+
+._justify {
+  justify-content: center;
+}
+
+._pointer {
+  cursor: pointer;
+}
+
+.W100 {
+  width: 100%;
+}
+// 粗体
+._blod {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.84);
+}
+
+.gray {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+@for $i from 1 to 5 {
+  $num: $i * 12;
+  $weight: $i * 100 + 500;
+  $size: $i * 2 + 10;
+  .ml-#{$num} {
+    margin-left: #{$num}px;
+  }
+  .mt-#{$num} {
+    margin-top: #{$num}px;
+  }
+  .mr-#{$num} {
+    margin-right: #{$num}px;
+  }
+  .mb-#{$num} {
+    margin-bottom: #{$num}px;
+  }
+  .margin-#{$num} {
+    margin: #{$num}px;
+  }
+  .pl-#{$num} {
+    padding-left: #{$num}px;
+  }
+  .pt-#{$num} {
+    padding-top: #{$num}px;
+  }
+  .pr-#{$num} {
+    padding-right: #{$num}px;
+  }
+  .pb-#{$num} {
+    padding-bottom: #{$num}px;
+  }
+  .padding-#{$num} {
+    padding: #{$num}px;
+  }
+  .fw-#{$weight} {
+    font-weight: #{$weight};
+  }
+  .fs-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}

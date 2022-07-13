@@ -1,0 +1,19 @@
+.el-date-editor{
+    width:100%
+}
+
+// 活动时间按钮
+.express-time-box {
+    display: inline-block;
+    padding: 0 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 18px;
+    height: 36px;
+    cursor: pointer;
+  }
+  
+  .curr-exp-time {
+    background: #409EFF;
+    color: #fff;
+  }
+  
